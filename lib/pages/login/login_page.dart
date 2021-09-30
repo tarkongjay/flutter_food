@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_food/pages/home_page.dart';
+import 'package:flutter_food/pages/home/home_page.dart';
 
 class LoginPage extends StatefulWidget {
+  static const routeName = '/login';
+
   const LoginPage({Key? key}) : super(key: key);
 
   @override
@@ -24,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
             // ไล่เฉดจากสีแดงไปสีน้ำเงิน
             colors: [
               Colors.white,
-              Colors.blue.shade100,
+              Colors.purple.shade100,
             ],
           ),
         ),
@@ -62,84 +64,84 @@ class _LoginPageState extends State<LoginPage> {
                               ? Icon(
                             Icons.circle,
                             size: 30.0,
-                            color: Colors.blue,
+                            color: Colors.purple,
                           )
                               : Opacity(
                             opacity: 0.5,
                             child: Icon(
                               Icons.circle,
                               size: 30.0,
-                              color: Colors.blue,
+                              color: Colors.purple,
                             ),
                           ),
                           input.length > 1
                               ? Icon(
                             Icons.circle,
                             size: 30.0,
-                            color: Colors.blue,
+                            color: Colors.purple,
                           )
                               : Opacity(
                             opacity: 0.5,
                             child: Icon(
                               Icons.circle,
                               size: 30.0,
-                              color: Colors.blue,
+                              color: Colors.purple,
                             ),
                           ),
                           input.length > 2
                               ? Icon(
                             Icons.circle,
                             size: 30.0,
-                            color: Colors.blue,
+                            color: Colors.purple,
                           )
                               : Opacity(
                             opacity: 0.5,
                             child: Icon(
                               Icons.circle,
                               size: 30.0,
-                              color: Colors.blue,
+                              color: Colors.purple,
                             ),
                           ),
                           input.length > 3
                               ? Icon(
                             Icons.circle,
                             size: 30.0,
-                            color: Colors.blue,
+                            color: Colors.purple,
                           )
                               : Opacity(
                             opacity: 0.5,
                             child: Icon(
                               Icons.circle,
                               size: 30.0,
-                              color: Colors.blue,
+                              color: Colors.purple,
                             ),
                           ),
                           input.length > 4
                               ? Icon(
                             Icons.circle,
                             size: 30.0,
-                            color: Colors.blue,
+                            color: Colors.purple,
                           )
                               : Opacity(
                             opacity: 0.5,
                             child: Icon(
                               Icons.circle,
                               size: 30.0,
-                              color: Colors.blue,
+                              color: Colors.purple,
                             ),
                           ),
                           input.length > 5
                               ? Icon(
                                   Icons.circle,
                                   size: 30.0,
-                                  color: Colors.blue,
+                                  color: Colors.purple,
                                 )
                               : Opacity(
                                   opacity: 0.5,
                                   child: Icon(
                                     Icons.circle,
                                     size: 30.0,
-                                    color: Colors.blue,
+                                    color: Colors.purple,
                                   ),
                                 ),
                         ],
@@ -222,10 +224,8 @@ class _LoginPageState extends State<LoginPage> {
         input = '';
       }
       if(input == '123456'){
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => HomePage()),
-        );
+        Navigator.pushReplacementNamed(context, HomePage.routeName);
+        //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()),);
                input = '';
       }
     });
